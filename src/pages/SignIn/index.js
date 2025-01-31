@@ -8,7 +8,7 @@ export default function SignIn(){
     return(
         <Background>
             <Container
-                behavior={Platform.OS === 'ios' ? 'padding' : ''} //no Android já acontece por padrão, por isso não é passado nada
+                behavior={Platform.OS === 'ios' ? 'padding' : ''} //no Android já acontece por padrão
                 enabled
             >
                 <Logo
