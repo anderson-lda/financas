@@ -11,6 +11,9 @@ export default function AuthRoutes(){
             <AuthStack.Screen
                 name='SignIn'
                 component={SignIn}
+                options={{
+                    headerShown: false,
+                }}
             />
             <AuthStack.Screen
                 name='SignUp'
