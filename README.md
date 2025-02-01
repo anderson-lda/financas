@@ -10,3 +10,5 @@ npm install react-native-screens react-native-safe-area-context
 npm install @react-navigation/native-stack
 npm install styled-components
 npm install axios
+npm install @react-navigation/drawer
+npm install react-native-gesture-handler react-native-reanimated

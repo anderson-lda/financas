@@ -5,6 +5,7 @@ import { useNavigation } from '@react-navigation/native'
 export const AuthContext = createContext({})
 
 export default function AuthProvider({ children }){
+    const [user, setUser] = useState(null)
     const [loadingAuth, setLoadingAuth] = useState(false)
     const navigation = useNavigation()
 
@@ -26,7 +27,7 @@ export default function AuthProvider({ children }){
     }
 
     return(
-        <AuthContext.Provider value={{ signUp, loadingAuth }}>
+        <AuthContext.Provider value={{ signed: !!user, signUp, loadingAuth }}>
             {children}
         </AuthContext.Provider>
     )
