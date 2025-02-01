@@ -12,3 +12,4 @@ npm install styled-components
 npm install axios
 npm install @react-navigation/drawer
 npm install react-native-gesture-handler react-native-reanimated
+npm install @react-native-async-storage/async-storage
