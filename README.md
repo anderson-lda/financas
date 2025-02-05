@@ -14,3 +14,4 @@ npm install @react-navigation/drawer
 npm install react-native-gesture-handler react-native-reanimated
 npm install @react-native-async-storage/async-storage
 npm install react-native-vector-icons
+npm install date-fns
