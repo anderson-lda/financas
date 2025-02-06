@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { Container, Label } from "./styles";
+import { Balance, Container, Label } from "./styles";
 
 export default function BalanceItem({data}) {
     const labelName = useMemo(() => {
