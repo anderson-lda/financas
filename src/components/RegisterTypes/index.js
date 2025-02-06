@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { RegisterContainer, RegisterLabel, RegisterTypeButton } from "./styles";
-import { Feather } from "react-native-vector-icons/Feather"
+import Feather from "react-native-vector-icons/Feather"
 
 export default function RegisterTypes({type,setTypeChanged}){
     const [typeChecked,setTypeChecked] = useState(type)
