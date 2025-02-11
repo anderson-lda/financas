@@ -6,7 +6,11 @@ export default function HistoricoList({ data }){
         <Container>
             <Tipo>
                 <IconView tipo={data.type}>
-                    <Icon name="arrow-down" size={20} color="#FFF" />
+                    <Icon 
+                        name={data.type === 'despesa' ? 'arrow-down' : 'arrow-up'} 
+                        size={20} 
+                        color="#FFF" 
+                    />
                     <TipoText>{data.type}</TipoText>
                 </IconView>
             </Tipo>
