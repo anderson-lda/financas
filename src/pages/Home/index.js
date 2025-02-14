@@ -1,6 +1,6 @@
 //import { useContext } from "react";
 //import { AuthContext } from "../../contexts/auth";
-import { Area, Background, ListBalance, Title } from "./styles";
+import { Area, Background, List, ListBalance, Title } from "./styles";
 import Header from "../../components/Header";
 import { useEffect, useState } from "react";
 import { format } from "date-fns";

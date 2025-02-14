@@ -1,12 +1,12 @@
 import { Alert, TouchableWithoutFeedback } from "react-native";
-import { Container, TipoText } from "./styles";
+import { Container, IconView, Tipo, TipoText, ValorText } from "./styles";
 import Icon from 'react-native-vector-icons/Feather'
 
 export default function HistoricoList({ data, deleteItem }){
     function handleDeleteItem(){
         Alert.alert(
             'Atenção',
-            'VOcê tem certeza da deleção deste registro?',
+            'Você tem certeza da deleção deste registro?',
             [
                 {
                     text: 'Cancelar',
@@ -34,9 +34,9 @@ export default function HistoricoList({ data, deleteItem }){
                     </IconView>
                 </Tipo>
 
-                <Valortext>
+                <ValorText>
                     R$ {data.value}
-                </Valortext>
+                </ValorText>
             </Container>
         </TouchableWithoutFeedback>
     )

@@ -22,8 +22,8 @@ export default function NewRegister(){
         }
 
         Alert.alert(
-            'Confirmando dados'
-            `Tipo: ${type} - Valor: ${parse.float(valueInput)}`,
+            'Confirmando dados',
+            `Tipo: ${type} - Valor: ${parseFloat(valueInput)}`,
             [
                 {
                     text: 'Cancelar',
