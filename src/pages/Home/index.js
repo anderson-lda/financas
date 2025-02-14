@@ -8,7 +8,7 @@ import api from "../../services/api";
 import { useIsFocused } from "@react-navigation/native";
 import BalanceItem from "../../components/BalanceItem";
 import { TouchableOpacity } from "react-native";
-import Icon from 'react-native-vector-icons/MaterialIcons'
+import Icon from 'react-native-vector-icons/Feather'
 import HistoricoList from "../../components/HistoricoList";
 
 export default function Home(){
@@ -73,7 +73,7 @@ export default function Home(){
 
             <Area>
                 <TouchableOpacity>
-                    <Icon name="event" color="#121212" />
+                    <Icon name="calendar" size={30} />
                     <Title>Últimas movimentações</Title>
                 </TouchableOpacity>
             </Area>

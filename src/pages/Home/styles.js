@@ -10,7 +10,7 @@ export const ListBalance = styled.FlatList`
 `;
 
 export const Area = styled.View`
-    margin-top: 22Spx;
+    margin-top: 22px;
     background-color: #FFFFFF;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
