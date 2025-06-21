@@ -7,15 +7,17 @@ import { format } from "date-fns";
 import api from "../../services/api";
 import { useIsFocused } from "@react-navigation/native";
 import BalanceItem from "../../components/BalanceItem";
-import { TouchableOpacity } from "react-native";
+import { Modal, TouchableOpacity } from "react-native";
 import Icon from 'react-native-vector-icons/Feather'
 import HistoricoList from "../../components/HistoricoList";
+import CalendarModal from "../../components/CalendarModal";
 
 export default function Home(){
     const isFocused = useIsFocused()
     const [listBalance, setListBalance] = useState([])
     const [movements, setMovements] = useState([])
     const [dateMovements, setDateMovements] = useState(new Date())
+    const [modalVisible, setModalVisible] = useState(false);
 
     useEffect(() => {
         let isActive = true
@@ -60,6 +62,10 @@ export default function Home(){
         }
     }
 
+    function filterDateMovements(dateSelected){
+        setDateMovements(dateSelected);
+    }
+
     return(
         <Background>
             <Header title="Minhas movimentacoes"/>
@@ -72,7 +78,7 @@ export default function Home(){
             />
 
             <Area>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={()=>setModalVisible(true)}>
                     <Icon name="calendar" size={30} />
                     <Title>Últimas movimentações</Title>
                 </TouchableOpacity>
@@ -85,6 +91,13 @@ export default function Home(){
                 showsVerticalScrollIndicator={false}  
                 contentContainerStyle={{paddingBottom: 20}}  
             />
+
+            <Modal visible={modalVisible} animationType="fade" transparent={true}>
+                <CalendarModal
+                    setVisible={()=>setModalVisible(false)}
+                    handleFilter={filterDateMovements}
+                />
+            </Modal>
         </Background>
     )
 }
