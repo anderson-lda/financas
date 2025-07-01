@@ -23,7 +23,10 @@ export default function Home(){
         let isActive = true
 
         async function getMovements(){
-            let dateFormatted = format(dateMovements, 'dd/MM/yyyy')
+            //let dateFormatted = format(dateMovements, 'dd/MM/yyyy')
+            let date = new Date(dateMovements)
+            let onlyDate = date.valueOf() + date.getTimezoneOffset()*60*1000;
+            let dateFormatted = format(onlyDate, "dd/MM/yyyy");
 
             const receives = await api.get('/receives', {
                 params: {
