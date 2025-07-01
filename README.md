@@ -15,3 +15,6 @@ npm install react-native-gesture-handler react-native-reanimated
 npm install @react-native-async-storage/async-storage
 npm install react-native-vector-icons
 npm install date-fns
+
+necessário executar o backend-financas-main com: npm run dev
+também pode ser necessário ajustar o IP em api.js

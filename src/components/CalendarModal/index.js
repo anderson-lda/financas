@@ -2,7 +2,7 @@ import { TouchableWithoutFeedback, View } from "react-native";
 import { ButtonFilterText, Container, ModalContent, ButtonFilter } from "./styles";
 import { useState } from "react";
 import { Calendar, LocaleConfig } from "react-native-calendars";
-import { ptBR } from "./LocaleCalendar";
+import { ptBR } from "./localeCalendar";
 
 LocaleConfig.locales['pt-br'] = ptBR;
 LocaleConfig.defaultLocale = 'pt-br';
